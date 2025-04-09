@@ -20,14 +20,10 @@ public class WordList
   }
 
   public void removeWordsOfLength(int len)
-  {
-    int offset = 0;
-    for (int i = 0; i < myList.size(); i++){
-      if (myList.get(i-offset).length() == len){
-        myList.get(i-offset).remove();
-        offset++;
-      }
+{
+  for (int i = myList.size() - 1; i >= 0; i--) {
+    if (myList.get(i).length() == len) {
+      myList.remove(i);
     }
-    return myList;
   }
 }
